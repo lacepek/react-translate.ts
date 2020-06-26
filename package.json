@@ -1,6 +1,6 @@
 {
   "name": "react-translate.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "translate.ts": "^1.0.2"
+    "translate.ts": "^1.0.3"
   },
   "peerDependencies": {
     "react": "^16.13.0",

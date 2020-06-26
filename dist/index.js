@@ -7,6 +7,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
@@ -17,9 +19,10 @@ function createCommonjsModule(fn, module) {
 
 var translator = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.translate = void 0;
 function translate(key, locale, translations, params) {
     if (key === null || key === undefined) {
-        return key;
+        return null;
     }
     var keys = key.split('.');
     var translation = keys.reduce(searchForKey, translations[locale]);
@@ -58,11 +61,18 @@ unwrapExports(translator);
 var translator_1 = translator.translate;
 
 var dist = createCommonjsModule(function (module, exports) {
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (commonjsGlobal && commonjsGlobal.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(translator);
+__exportStar(translator, exports);
 });
 
 unwrapExports(dist);
@@ -121,6 +131,9 @@ var Translate = function (_a) {
     var params = _a.params, children = _a.children, namespace = _a.namespace, _b = _a.textOnly, textOnly = _b === void 0 ? false : _b, rest = __rest(_a, ["params", "children", "namespace", "textOnly"]);
     var translate = useTranslate(namespace);
     var translation = translate(children, params);
+    if (translation === null || translation === undefined) {
+        return "" + translation;
+    }
     if (textOnly) {
         return translation;
     }
