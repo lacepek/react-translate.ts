@@ -18,6 +18,9 @@ function createCommonjsModule(fn, module) {
 var translator = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 function translate(key, locale, translations, params) {
+    if (key === null || key === undefined) {
+        return key;
+    }
     var keys = key.split('.');
     var translation = keys.reduce(searchForKey, translations[locale]);
     if (!translation) {
