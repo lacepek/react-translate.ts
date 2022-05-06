@@ -1,6 +1,6 @@
 {
   "name": "react-translate.ts",
-  "version": "1.0.6",
+  "version": "1.0.8.beta1",
   "description": "React provider for translate.ts library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
