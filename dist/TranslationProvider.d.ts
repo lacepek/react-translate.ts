@@ -4,6 +4,6 @@ import { Translations } from "./types";
 export declare type TranslationProviderProps = {
     translations: Translations;
     locale: string;
-    options: Options;
+    options?: Options;
 };
 export declare function TranslationProvider(props: PropsWithChildren<TranslationProviderProps>): JSX.Element;
