@@ -4,5 +4,5 @@ import { Translations } from "./types";
 export declare const TranslationContext: import("react").Context<{
     translations: Translations;
     locale: string;
-    options: Options;
+    options?: Options | undefined;
 }>;
