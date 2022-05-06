@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import { Translations } from './types';
+import { PropsWithChildren } from "react";
+import { Options } from "translate.ts";
+import { Translations } from "./types";
 export declare type TranslationProviderProps = {
     translations: Translations;
     locale: string;
+    options: Options;
 };
-export declare const TranslationProvider: FC<TranslationProviderProps>;
+export declare function TranslationProvider(props: PropsWithChildren<TranslationProviderProps>): JSX.Element;
