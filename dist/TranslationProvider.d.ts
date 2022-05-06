@@ -1,9 +1,9 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 import { Options } from "translate.ts";
-import { Translations } from "./types";
-export declare type TranslationProviderProps = {
-    translations: Translations;
+export declare type TranslationProviderProps<T = unknown> = {
+    translations: T;
     locale: string;
-    options: Options;
+    options?: Options;
 };
-export declare function TranslationProvider(props: PropsWithChildren<TranslationProviderProps>): JSX.Element;
+export declare const TranslationContext: React.Context<TranslationProviderProps<unknown>>;
+export declare function TranslationProvider<T = unknown>(props: PropsWithChildren<TranslationProviderProps<T>>): JSX.Element;
