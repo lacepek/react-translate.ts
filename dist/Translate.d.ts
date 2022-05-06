@@ -1,4 +1,4 @@
-import { FC, HTMLProps } from 'react';
+import { HTMLProps } from "react";
 export interface TranslateProps extends HTMLProps<HTMLDivElement> {
     params?: {
         [key: string]: any;
@@ -7,4 +7,4 @@ export interface TranslateProps extends HTMLProps<HTMLDivElement> {
     textOnly?: boolean;
     children: string;
 }
-export declare const Translate: FC<TranslateProps>;
+export declare function Translate(props: TranslateProps): any;

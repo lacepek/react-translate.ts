@@ -1,10 +1,12 @@
-import { createContext } from 'react';
+import { createContext } from "react";
+import { Options } from "translate.ts";
 
-import { Translations } from './types';
+import { Translations } from "./types";
 
-const defualtContext = { locale: 'en', translations: {} } as {
+const defaultContext = { locale: "en", translations: {} } as {
     translations: Translations;
     locale: string;
+    options: Options;
 };
 
-export const TranslationContext = createContext(defualtContext);
+export const TranslationContext = createContext(defaultContext);
