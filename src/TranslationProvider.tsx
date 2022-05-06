@@ -7,7 +7,7 @@ import { TranslationContext } from "./TranslationContext";
 export type TranslationProviderProps = {
     translations: Translations;
     locale: string;
-    options: Options;
+    options?: Options;
 };
 
 export function TranslationProvider(props: PropsWithChildren<TranslationProviderProps>) {
