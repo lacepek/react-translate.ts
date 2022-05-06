@@ -6,7 +6,7 @@ import { Translations } from "./types";
 const defaultContext = { locale: "en", translations: {} } as {
     translations: Translations;
     locale: string;
-    options?: Options;
+    options: Options;
 };
 
 export const TranslationContext = createContext(defaultContext);
