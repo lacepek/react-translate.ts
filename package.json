@@ -1,18 +1,20 @@
 {
   "name": "react-translate.ts",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "React provider for translate.ts library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "prepublishOnly": "node prepublish.js",
+    "release": "npm run build && RELEASE=true npm publish"
   },
   "keywords": [],
   "author": "Ladislav Čepek",
   "license": "ISC",
   "dependencies": {
-    "translate.ts": "^1.0.4"
+    "translate.ts": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^17.0.2"
