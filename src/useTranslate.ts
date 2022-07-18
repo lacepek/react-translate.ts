@@ -6,7 +6,8 @@ import { Params } from "./types";
 
 type Options = {
     capitalize?: boolean;
-    context?: string | string[]
+    context?: string | string[];
+    ordinal?: boolean;
 };
 
 export function useTranslate(namespace = "") {
