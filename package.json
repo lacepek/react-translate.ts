@@ -1,6 +1,6 @@
 {
   "name": "react-translate.ts",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "React provider for translate.ts library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   "author": "Ladislav Čepek",
   "license": "ISC",
   "dependencies": {
-    "translate.ts": "^1.2.2"
+    "translate.ts": "^1.2.3"
   },
   "peerDependencies": {
     "react": "^17.0.x"
