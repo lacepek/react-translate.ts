@@ -1,14 +1,8 @@
 import { useContext } from "react";
-import { translate } from "translate.ts";
+import { Options, translate } from "translate.ts";
 
 import { TranslationContext } from "./TranslationContext";
 import { Params } from "./types";
-
-type Options = {
-    capitalize?: boolean;
-    context?: string | string[];
-    ordinal?: boolean;
-};
 
 export function useTranslate(namespace = "") {
     const { translations, locale, options: _options } = useContext(TranslationContext);
