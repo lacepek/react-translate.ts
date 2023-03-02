@@ -1,7 +1,7 @@
-export declare type Params = {
+export type Params = {
     [key: string]: any;
 };
-export declare type Translations = {
+export type Translations = {
     [key: string]: any | TranslationCallback;
 };
-export declare type TranslationCallback = (params: Params) => string;
+export type TranslationCallback = (params: Params) => string;

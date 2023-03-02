@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { Options } from "translate.ts";
 import { Translations } from "./types";
-export declare type TranslationProviderProps = {
+export type TranslationProviderProps = {
     translations: Translations;
     locale: string;
     options?: Options;

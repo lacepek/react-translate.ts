@@ -9,7 +9,7 @@ export interface TranslateProps extends HTMLProps<HTMLDivElement> {
     element?: string;
     components?: TranslateComponents;
 }
-export declare type TranslateComponents = {
+export type TranslateComponents = {
     [key: string]: ReactElement;
 };
 export declare function Translate(props: TranslateProps): any;
